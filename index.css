@@ -1,0 +1,395 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Kumbh Sans;
+}
+/*navbar styling*/
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    /* align-items: baseline; */
+}
+nav{
+    border-bottom: 2px solid #F4F4F4;
+    padding:2em 2em ;
+    margin: 0 6em;  
+    justify-content: space-between;
+
+}
+nav li{
+    margin: 0 1em;
+}
+nav h3{
+    font-size: 2rem;
+    margin-top: 0.25em;
+}
+.universal-container{
+    display: flex;
+    margin: 3em 6em;
+    justify-content: space-between;
+}
+/*image styling*/
+.profile{
+    width: 50px;   
+}
+#sneak{
+    margin-left: 0px;
+}
+.cart{
+    position: relative;
+    padding: 5px;
+    margin-left: 25em;
+    margin-top: 0.4em;
+    font-size: 1em;
+}
+.cart i{
+    font-size: 1.875em;
+}
+/*cart-amount styling*/
+.cart-amount{
+    position: absolute;
+    top: -9px;
+    right: 0;
+    background-color: #FF7D1B;
+    font-size: 1em;
+    color: #ffffff;
+    padding: 2px;
+    border-radius: 3px;
+}
+.list-items{
+    color: #808080;
+    margin-top: 1.3em;
+}
+.inner-div{
+    width: 70%;
+    justify-content: space-between;
+    margin-left: 5em;
+}
+.inner-div-2{
+    width: 50%;
+    padding-left: em;
+    
+}
+.inner-div img{
+border-radius: 15px;
+}
+.selection-space img{
+    width: 74%;
+}
+.thumbnails{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    width: 74%;
+}
+.thumbnails img{
+    width: 20%;
+}
+.thumbnails img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    border: 2px solid #FF7D1B;
+}
+.inner-div-2 h2{
+    color: #808080;
+    margin-top: 2em;
+}
+#inner-div-first-p{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.inner-div-2 span{
+    margin-left: 1em;
+    padding: 0.2em 0.4em;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.number-paragraph{
+margin-top: 1em;
+font-size: 1.5em;
+font-weight: bold;
+}
+.number-paragraph-2{
+text-decoration: line-through;
+color: #808080;
+margin-top: 1em;
+}
+.buttons{
+    display: flex;
+    gap: 2.875em;
+    margin-top: 3em;
+    background-color: #F7F8FD;
+    padding: 0.6em;
+    width: 30%;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.buttons p{
+    color: #FF7D1B;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: -0.45em;
+}
+.button-arrangement{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.add-to-cart{
+    background-color: #FF7D1B;
+    color: #000000;
+    padding: 10px 95px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 45px;
+}
+.add-to-cart i{
+    font-weight: bold;
+}
+
+
+/* CSS for Image Modal and Cart Dropdown */
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 70%;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 75vh;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none; /* Disable interactions with the nav buttons */
+}
+
+.modal-nav button {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    pointer-events: auto; /* Re-enable interactions on the buttons */
+}
+
+.modal-nav .modal-prev {
+    position: absolute;
+    left: -20px;
+}
+.modal-nav .modal-prev:hover{
+    color: #FF7D1B;
+}
+.modal-nav .modal-next {
+    position: absolute;
+    right: -20px;
+}
+.modal-nav .modal-next:hover{
+    color: #FF7D1B;
+}
+.cart-dropdown {
+    position: absolute;
+    right: 2em;
+    top: 4em;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    display: none;
+    z-index: 1000;
+    border-radius: 5px;
+}
+
+.cart-dropdown.show {
+    display: block;
+    padding: 3em 3em;
+}
+
+.cart-dropdown p {
+    margin: 0.5em 0;
+}
+.cart-dropdown .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.cart-dropdown .cart-item img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.cart-dropdown button {
+    background: #FF7D1B;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#increase,#decrease:hover{
+cursor: pointer;
+}
+.add-to-cart:hover{
+    cursor: pointer;
+}
+a:hover{
+    cursor: pointer;
+    color: #FF7D1B;
+    border-bottom: 2px solid #FF7D1B;
+}
+#sneak:hover,.cart:hover{
+border-bottom: none;
+color: none;
+}
+#profile:hover{
+    border-bottom: none;
+}
+#sneak:hover{
+    color: none;
+}
+
+#increase, #decrease {
+    user-select: none;
+}
+.add-to-cart{
+    user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
